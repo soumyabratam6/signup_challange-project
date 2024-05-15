@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form id="signupForm" autocomplete="off">
+        <div class="form-control">
+          <div class="form-label">Email</div>
+          <div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              onchange="validateEmailonch()"
+              placeholder="Example@email.com"
+            />
+          </div>
+          <div><span id="emailError" class="error"></span><br /></div>
+        </div>
+        <div class="form-control">
+          <div class="form-label">Password</div>
+          <div>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              onchange="validatePasswordonch()"
+              placeholder="Your Password"
+            />
+          </div>
+          <div><span id="passwordError" class="error"></span><br /></div>
+        </div>
+        <button type="submit" class="btn" onclick="submitForm(event)">
+          Submit
+        </button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
